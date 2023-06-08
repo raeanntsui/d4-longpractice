@@ -1,5 +1,8 @@
 module.exports = function reverseString(string) {
-  // Your code here
+  if (typeof string !== "string") {
+    throw new TypeError();
+  }
+  
   let reversed = "";
   for (let i = string.length - 1; i >= 0; i--) {
     let character = string[i];
@@ -8,4 +11,4 @@ module.exports = function reverseString(string) {
   return reversed;
 };
 
-console.log(reverseString("fun"));
+// console.log(reverseString("fun"));
